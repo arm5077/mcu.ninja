@@ -1,0 +1,55 @@
+result-cue {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #13D4BB 47%, #136F63 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.transition {
+    transition: all .25s;
+  }
+
+  &[reject] {
+    background-image: linear-gradient(180deg, #E17F5C 50%, #E53D00 100%);
+    right: 0;
+    left: auto;
+  }
+  
+  .message {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: white;
+    width: 200px;
+    min-width: 200px;
+    font-weight: 400;
+    opacity: 0;
+      
+    .emoji-cue:after {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+      content: "👍";
+      font-size: 48px;
+    } 
+  }
+
+  &[approve] .message {
+    &:after {
+      content: attr(title) ' is better';
+    }
+  }
+  
+  &[reject] .message {
+    &:after {
+      content: attr(title) ' is worse';
+    }
+    
+    .emoji-cue:after {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+      content: "👎";
+      font-size: 48px;
+    }
+  } 
+}

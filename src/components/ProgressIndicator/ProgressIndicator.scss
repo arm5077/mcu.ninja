@@ -1,0 +1,24 @@
+progress-indicator {
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+  
+    .circle {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1px solid white;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-right: 4px;
+      transition: .5s all;
+    
+      &.filled {
+        background-color: white;
+      }
+    }
+  }
+}

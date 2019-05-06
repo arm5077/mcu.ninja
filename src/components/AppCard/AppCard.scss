@@ -1,0 +1,126 @@
+app-card {
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 0px 50px black;
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top {
+    height: 140px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .bottom {
+    height: calc(100% - 140px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  div[slot="front-content"] {
+    height: 100%;
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 10;
+    width: 100%;
+    height: 20px;
+  }
+  
+  #undo {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+  
+  #progress {
+    left: -60px;
+    padding: 25px 0px 0px 50px;
+    justify-content: center;
+
+    .numeral {
+      &:after {
+        content: "%"
+      }
+    } 
+  }
+  
+  #results {
+    background-image: linear-gradient(179deg, #D50C0C 0%, #6f0505 100%);
+    color: white;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    overflow-y: scroll;
+    max-height: 100%;
+
+    p {
+      font-size: 16px;
+      font-family: Roboto, sans-serif;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    .result-title-wrapper {
+      text-align: center;
+      padding-top: 24px;
+      margin-bottom: 10px;
+    }
+    .result-title {
+      background-color: white;
+      padding: 16px;
+      color: #AA0505;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 32px;
+    }
+    
+    ol {
+      box-sizing: border-box;
+      padding-right: 24px;
+      margin: 30px 0px;
+    }
+    
+    li {
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 18px;
+      color: #FFFFFF;
+      letter-spacing: 0.89px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+    
+    li:nth-child(5n):after {
+      content: " ";
+      width: calc(100% + 25px);
+      border-bottom: 1px solid white;
+      margin-bottom: 24px;
+      margin-top: 24px;
+      height: 1px;
+      display: block;
+      position: relative;
+      left: -25px;
+    }
+  }
+  
+  .progress {
+    background-color: #570101;
+    height: 10px;
+    width: 0%;
+    transition: .25s all;
+  }
+}

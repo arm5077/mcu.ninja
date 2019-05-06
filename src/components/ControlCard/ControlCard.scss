@@ -1,0 +1,48 @@
+control-card {
+  .content {
+    background-image: linear-gradient(179deg, #D50C0C 0%, #6f0505 100%);
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5% 10% 8%;
+    
+    div[slot="front-content"], div[slot="back-content"] {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+    
+    #title {
+      width: 150%;
+    }
+    
+    .kicker {
+      font-family: Roboto, sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: #FFFFFF;
+      letter-spacing: 0.13px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    
+    .title {
+      color: white;
+      font-family: Roboto, sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 0.2px;
+      box-sizing: border-box;
+      padding-right: 20px;
+    }
+    
+    .image div[slot="front-content"], div[slot="back-content"] {
+      justify-content: center;
+    }
+    
+    .movie-poster {
+      height: 100%;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    }
+  }
+}

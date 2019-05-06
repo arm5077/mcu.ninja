@@ -1,0 +1,54 @@
+intro-card {
+  .title {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 0.89px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  p {
+    color: white;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  img, video {
+    max-height: 350px;
+    height: 50%;
+    box-shadow: 0 0 10px 0 #000000;
+  }
+  
+  .notation {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0.2px;
+    text-align: center;
+    
+    .emoji {
+      margin: 10px 0px;
+    }
+  }
+  
+  .tap-to-continue {
+    font-weight: 100;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: .5;
+  }
+  
+}
